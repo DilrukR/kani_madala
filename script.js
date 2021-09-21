@@ -1,5 +1,10 @@
 // loder
-git
+const loder = document.getElementById('loder');
+
+function load() {
+    loder.style.display = 'none';
+}
+
 // mobile menu
 const nav = document.getElementById('nav');
 const ham = document.querySelector('.hamburger')
