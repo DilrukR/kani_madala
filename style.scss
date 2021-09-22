@@ -131,6 +131,14 @@ body {max-width: 100%;}
         font-family: $nav-font;
         font-size: 16px;
     }
+
+    .form{
+        width: 100%;
+    }
+
+    .form iframe{
+        width: 100%;
+    }
 }
 @media only screen and ( min-width: 768px){
    
@@ -201,6 +209,15 @@ body {max-width: 100%;}
         color: rgba(255, 255, 255, 0.671);
         font-family: $nav-font;
         font-size: 18px;
+    }
+    .form{
+        margin: 0 auto;
+        width: 100%;
+        
+    }
+
+    iframe{
+        width: 100%;
     }
 }
     
