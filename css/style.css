@@ -107,7 +107,7 @@
     background-size: cover;
     height: 60vh;
     width: 100%;
-    padding-top: 15%;
+    padding-top: 8%;
     position: absolute;
   }
   .hero::before {
@@ -116,12 +116,12 @@
     width: 100%;
     background-color: #121212da;
     display: block;
-    margin-top: -15%;
+    margin-top: -8%;
     position: absolute;
   }
   .hero h1 {
     font-size: 24px;
-    padding-bottom: 3%;
+    padding-bottom: 8%;
     color: #fff;
     font-family: raleway;
     position: relative;
@@ -137,10 +137,9 @@
     padding-bottom: 5%;
   }
   .btn-container {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .hero a {
-    margin-top: 40px;
     background-color: #563d7c;
     position: relative;
     z-index: 1;
