@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Booking page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- Internal css -->
+    <style type="text/css">
+      /* for container line */
+      .container {
+        width: 50%;
+
+        padding: 0 10px;
+
+        transform: translate(0%, 0%);
+        outline: 1px solid #000;
+      }
+      .container .input-area {
+        width: 100%;
+        padding: 10px 0px;
+        align-items: center;
+        text-align: center;
+      }
+      .input-area input[type="text"] {
+        width: 95%;
+        height: 30px;
+        border: 1px solid rgb(32, 31, 31);
+        border-radius: 5px;
+        padding-left: 20px;
+      }
+
+      .input-area i {
+        position: absolute;
+        margin-left: -20px;
+        padding-top: 10px;
+      }
+
+      .container .container-a {
+        display: flex;
+      }
+      .img-container {
+        padding-left: 10px;
+      }
+
+      .container-a {
+        border-bottom: 1px solid rgba(44, 42, 42, 0.205);
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      .container-a .text-container {
+        padding-left: 30px;
+        line-height: 15px;
+      }
+
+      .container-a .text-container h3 {
+        font-family: sans-serif;
+        width: 100%;
+        font-size: 18px;
+        position: relative;
+      }
+      .container-a .text-container p {
+        font-family: sans-serif;
+        font-size: 14px;
+      }
+
+      .container-a .sp-con {
+        display: flex;
+      }
+
+      .container-a .great-v p {
+        background-color: #007bff;
+        font-size: 12px;
+        width: 70px;
+        padding: 5px;
+        font-weight: bolder;
+        color: #fff;
+        border-left: 7px solid #fff;
+        margin-right: 10px;
+      }
+      .container-a .high-d p {
+        background-color: #ff0077;
+        font-size: 12px;
+        width: 95px;
+        padding: 5px;
+        font-weight: bolder;
+        color: #fff;
+      }
+
+      h1 {
+        color: limegreen;
+        font-weight: lighter;
+        font-family: sans-serif;
+      }
+
+      .btn-div {
+        text-align: right;
+        padding-left: 150px;
+        padding-top: 140px;
+      }
+
+      button {
+        width: 120px;
+        height: 40px;
+        border: none;
+        background: #0026ff;
+        color: #fff;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+
+      .warn {
+        background-color: #dc354648;
+        border: 1px solid #dc3546;
+        padding: 10px 30px 8px 10px;
+        line-height: 2px;
+      }
+
+      h4 {
+        color: #dd1e31;
+        font-size: 14px;
+        font-family: sans-serif;
+      }
+
+      .warn p {
+        color: #dd1e31;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contain all content -->
+    <div class="container">
+      <!-- For search bar -->
+      <div class="input-area">
+        <input type="text" placeholder="Search" />
+        <span><i class="fas fa-search"></i></span>
+      </div>
+
+      <div class="container-a">
+        <div class="img-container">
+          <img src="https://dummyimage.com/240x240/e87110/fff.jpg" alt="" />
+        </div>
+        <div class="text-container">
+          <h3>Cinnamon Red Colombo</h3>
+          <p>Kollupitiya,Colombo</p>
+          <div class="sp-con">
+            <span class="high-d"><p>In High Demand</p></span>
+            <span class="great-v"><p>Great value</p></span>
+          </div>
+
+          <h1>LKR 15,0000</h1>
+        </div>
+        <div class="btn-div">
+          <button>Book Now</button>
+        </div>
+      </div>
+      <div class="container-a">
+        <div class="img-container">
+          <img src="https://dummyimage.com/240x240/e87110/fff.jpg" alt="" />
+        </div>
+        <div class="text-container">
+          <h3>Fairway Colombo</h3>
+          <p>Fort,Colombo</p>
+          <div class="sp-con">
+            <span class="high-d"><p>In High Demand</p></span>
+          </div>
+          <div class="warn">
+            <h4>You missed it!</h4>
+            <p>
+              Your dates are poppular - we've run out of room at this property
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

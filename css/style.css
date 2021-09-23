@@ -7,11 +7,7 @@
           box-sizing: border-box;
 }
 
-body {
-  max-width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   #loder {
     position: absolute;
     width: 100%;
@@ -52,7 +48,7 @@ body {
     max-height: 100%;
   }
   .icon_container {
-    background-color: blue;
+    background-color: #563d7c;
     width: 60px;
     height: 60px;
     text-align: center;
@@ -70,16 +66,20 @@ body {
   }
   nav {
     position: relative;
+    width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     text-align: left;
     padding: 30px;
     background: #121212;
-    -webkit-transform: translateX(-120%);
-            transform: translateX(-120%);
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: 0.7s ease;
+    transition: 0.7s ease;
+    z-index: 99;
+    position: absolute;
   }
   nav ul li {
     list-style: none;
@@ -100,16 +100,81 @@ body {
   .form iframe {
     width: 100%;
   }
+  .hero {
+    text-align: center;
+    background-image: url("../img/akson-1K8pIbIrhkQ-unsplash.jpg");
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    padding-top: 10%;
+    position: absolute;
+  }
+  .hero::before {
+    content: "";
+    height: 70vh;
+    width: 100%;
+    background-color: #121212da;
+    display: block;
+    margin-top: -10%;
+    position: absolute;
+  }
+  .hero h1 {
+    font-size: 24px;
+    padding-bottom: 3%;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  .hero p {
+    font-size: 14px;
+    padding: 0 4%;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 5%;
+  }
+  .hero a {
+    margin-top: 40px;
+    background-color: #563d7c;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color: #fff;
+    font-family: raleway;
+    padding: 10px;
+    border-radius: 5px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   #loder {
     position: absolute;
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s fade;
+    transition: all 1s fade;
+    -webkit-animation: fade;
+            animation: fade;
+  }
+  @-webkit-keyframes fade {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
   #loder .container {
     top: 50%;
@@ -159,6 +224,7 @@ body {
   nav ul li {
     margin: 0 20px;
     list-style-type: none;
+    text-align: center;
   }
   nav ul li :last-child {
     margin-left: 30px;
@@ -168,6 +234,19 @@ body {
     color: rgba(255, 255, 255, 0.671);
     font-family: Roboto;
     font-size: 18px;
+    margin: 10px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 5px;
+  }
+  .bar {
+    height: 2px;
+    width: 100%;
+    color: white;
+    display: block;
+  }
+  nav ul li a:hover {
+    color: white;
   }
   .form {
     margin: 0 auto;
