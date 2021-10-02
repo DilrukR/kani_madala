@@ -26,6 +26,10 @@ html {
 // for mobile responsive
 
 @media only screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
   #loder {
     position: absolute;
     width: 100%;
