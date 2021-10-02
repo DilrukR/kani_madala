@@ -11,6 +11,8 @@
       media="screen"
       href="./css/style.css"
     />
+
+    <link rel="stylesheet" href="./fullpage.css" />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -18,7 +20,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body onload="load()">
+  <body onload="load();">
     <!-- loading -->
 
     <div id="loder">
@@ -29,7 +31,7 @@
 
     <!-- Header -->
 
-    <header>
+    <header id="header" id="header">
       <div class="header_container">
         <div class="logo"><img src="./img/logo.png" alt="" /></div>
 
@@ -40,8 +42,8 @@
       </div>
       <nav id="nav">
         <ul>
-          <li><a href="">Home</a><span class="bar"></span></li>
-          <li><a href="">Events</a><span class="bar"></span></li>
+          <li><a href="#">Home</a><span class="bar"></span></li>
+          <li><a href="#heading">Events</a><span class="bar"></span></li>
           <li><a href="">Charity Works</a><span class="bar"></span></li>
           <li><a href="">Contact Us</a><span class="bar"></span></li>
         </ul>
@@ -50,22 +52,75 @@
 
     <!-- Hero -->
 
-    <div class="hero">
-      <h1>Kani madala</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo,
-        explicabo temporibus quod suscipit id porro dignissimos, et sed quidem
-        voluptates ipsa odio minus rem expedita perspiciatis deserunt corrupti
-        fugit officia consectetur perferendis veritatis aliquid? Sint delectus
-        nisi quo obcaecati excepturi.
-      </p>
-
-      <div class="btn-container">
-        <a href="#">Click Here</a>
-        <a href="#">To Register</a>
+    <!-- Slider-start -->
+    <div class="hero" id="hero">
+      <div class="slider">
+        <img src="./img/student.jpg" alt="" />
+        <div class="text-box">
+          <h1>Ongoing</h1>
+          <span></span>
+          <p>
+            0 Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            mollitia consequatur ratione ab voluptatem sunt laborum maxime quis
+            maiores! Quidem.
+          </p>
+          <div class="btn-con">
+            <button>
+              <a href="">Register ></a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- info container -->
+
+    <div class="heading" id="heading">
+      <h1>OUR WORKS</h1>
+    </div>
+
+    <section class="info" id="info">
+      <div class="containers">
+        <div class="container-1">
+          <div class="text-con">
+            <h1>heading</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut at,
+              placeat corporis nostrum cupiditate laboriosam iste nobis deserunt
+              odio ipsam quae maxime recusandae molestiae, soluta necessitatibus
+              magnam ab quaerat laudantium!
+            </p>
+          </div>
+          <img src="./img/senehasa.jpeg" alt="" />
+        </div>
+        <div class="container-1">
+          <div class="text-con">
+            <h1>heading</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut at,
+              placeat corporis nostrum cupiditate laboriosam iste nobis deserunt
+              odio ipsam quae maxime recusandae molestiae, soluta necessitatibus
+              magnam ab quaerat laudantium!
+            </p>
+          </div>
+          <img src="./img/seminar.jpeg" alt="" />
+        </div>
+        <div class="container-1">
+          <div class="text-con">
+            <h1>heading</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut at,
+              placeat corporis nostrum cupiditate laboriosam iste nobis deserunt
+              odio ipsam quae maxime recusandae molestiae, soluta necessitatibus
+              magnam ab quaerat laudantium!
+            </p>
+          </div>
+          <img src="./img/senehasa.jpeg" alt="" />
+        </div>
+      </div>
+    </section>
+
     <script src="./script.js"></script>
+    <script src="./fullpage.js"></script>
   </body>
 </html>
