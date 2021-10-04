@@ -34,9 +34,14 @@ function hide() {
 
 const btn = document.querySelector(".reg");
 const formArea = document.querySelector(".form-area");
+const form = document.querySelector(".form-con");
 
 btn.addEventListener("click", regshow);
+form.addEventListener("click", hidden);
 
 function regshow() {
-  formArea.style.display = "flex";
+  form.style.display = "flex";
+}
+function hidden() {
+  form.style.display = "none";
 }
