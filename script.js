@@ -6,19 +6,8 @@ function load() {
   loder.style.display = "none";
 }
 
-//for smooth scroll
-
-function smoothScroll(target, duration) {
-  var target = document.querySelector(target);
-  var targetposition = target.getBoundingClientRect(0).top;
-  var startPosition = window.pageYOffset;
-
-  console.log(startPosition);
-}
-
-smoothScroll("header", 1000);
-
 // mobile menu
+//
 const nav = document.getElementById("nav");
 const ham = document.querySelector(".hamburger");
 const cross = document.querySelector(".cross");
@@ -39,4 +28,15 @@ function hide() {
   cross.style.display = "none";
   ham.style.display = "block";
   nav.style.opacity = 0;
+}
+
+// register pop up
+
+const btn = document.querySelector(".reg");
+const formArea = document.querySelector(".form-area");
+
+btn.addEventListener("click", regshow);
+
+function regshow() {
+  formArea.style.display = "flex";
 }

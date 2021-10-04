@@ -50,7 +50,8 @@ html {
   }
 
   .header {
-    position: fixed;
+    position: relative;
+    z-index: 5;
     top: 0;
     left: 0;
   }
@@ -62,6 +63,8 @@ html {
     background-color: #121212;
     padding-left: 30px;
     padding-top: 10px;
+    position: relative;
+    z-index: 60;
   }
 
   .logo {
@@ -123,11 +126,68 @@ html {
     font-size: 16px;
   }
 
-  .slider {
+  .hero {
+    width: 100%;
+    height: 50vh;
+    top: 0;
+
+    img {
+      width: 100%;
+      height: 50vh;
+      position: absolute;
+      top: 0;
+    }
+
+    .text-box {
+      position: relative;
+      z-index: 7;
+      padding: 10vh 20px 0;
+      color: #fff;
+
+      align-items: center;
+      text-align: center;
+
+      h1 {
+        padding-bottom: 20px;
+      }
+
+      .btn-con {
+        padding-top: 30px;
+
+        button {
+          width: 80px;
+          height: 30px;
+          background-color: #563d7c;
+          border: none;
+          border-radius: 5px;
+          a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .form-area {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    z-index: 80;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: none;
   }
+
+  .info {
+    max-width: 100%;
+  }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 801px) {
   body {
     overflow-x: hidden;
   }
@@ -167,7 +227,10 @@ html {
     background-color: #12121256;
     padding: 10px 20px;
     z-index: 20;
-    position: sticky;
+    position: relative;
+
+    top: 0px;
+    width: 100%;
   }
 
   .logo {
@@ -223,13 +286,13 @@ html {
   // css for slider sizing
   .hero {
     position: relative;
-    margin-bottom: 100vh;
-    top: -160px;
+    margin-bottom: 115vh;
+    margin-top: -12%;
 
     .slider {
       height: 100vh;
       width: 100%;
-      margin-top: 80px;
+      margin-top: 20px;
       position: absolute;
       left: 0;
       overflow: hidden;
@@ -296,19 +359,32 @@ html {
     }
   }
 
+  .form-area {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    z-index: 80;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
   .heading {
-    bottom: 0;
+    top: 60px;
     text-align: center;
     font-family: $primery-font;
-    overflow: hidden;
   }
 
   .info {
     width: 100vw;
-    margin: 0 auto;
+    margin: 100 auto;
     margin-left: 7%;
     bottom: 0;
-    margin-top: 90px;
+    margin-top: 70px;
     padding-bottom: 100px;
 
     .containers {
