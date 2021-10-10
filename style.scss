@@ -4,7 +4,7 @@
 
 $primery-font: raleway;
 $nav-font: Roboto;
-$primery-colr: #121212c5;
+$primery-colr: #121212ee;
 $overlay: linear-gradient(
   180deg,
   rgba(12, 20, 29, 0.384) 0%,
@@ -28,6 +28,7 @@ html {
 @media only screen and (max-width: 800px) {
   body {
     overflow-x: hidden;
+    background: $primery-colr;
   }
 
   #loder {
@@ -36,7 +37,7 @@ html {
     height: 100vh;
     background-color: #fff;
     transition: all 1s ease-in-out;
-    z-index: 99;
+    z-index: 999;
   }
 
   #loder .container {
@@ -49,11 +50,12 @@ html {
     width: 100px;
   }
 
-  .header {
-    position: relative;
+  header {
+    position: fixed;
     z-index: 5;
     top: 0;
     left: 0;
+    width: 100%;
   }
   .header_container {
     display: flex;
@@ -86,6 +88,7 @@ html {
     padding: 10px 20px 10px 20px;
     font-weight: lighter;
     margin-top: -10px;
+    position: relative;
   }
 
   .hamburger {
@@ -104,7 +107,7 @@ html {
     text-align: left;
     padding: 30px;
     background: #121212;
-    opacity: 0;
+
     transform: translateX(-100%);
     transition: 0.7s ease;
     z-index: 99;
@@ -129,18 +132,20 @@ html {
   .hero {
     width: 100%;
     height: 50vh;
+    padding-top: 30px;
     top: 0;
 
     img {
       width: 100%;
       height: 50vh;
       position: absolute;
+
       top: 0;
     }
 
     .text-box {
       position: relative;
-      z-index: 7;
+      z-index: 1;
       padding: 10vh 20px 0;
       color: #fff;
 
@@ -167,7 +172,8 @@ html {
   }
 
   .form-con {
-    display: none;
+    opacity: 0;
+    transition: 0.5s;
 
     .cross-con {
       position: absolute;
@@ -191,29 +197,33 @@ html {
 
   .heading {
     text-align: center;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    color: #fff;
   }
 
   .info {
     max-width: 100%;
 
     img {
-      width: 100%;
-    }
-    img::before {
-      content: "";
-      width: 100%;
-      height: 400px;
-      background: $overlay;
-      margin-bottom: 400px;
-      border-radius: 10px;
-      position: absolute;
-      overflow: hidden;
-      z-index: 80;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: center;
+      display: flex;
     }
 
     .text-con {
-      position: absolute;
+      position: relative;
+      text-align: center;
+      height: 200px;
+      color: #fff;
+      text-align: left;
+      padding-left: 20px;
+      padding-top: 40px;
+
+      h1 {
+        padding-bottom: 20px;
+      }
     }
   }
 }
@@ -229,6 +239,7 @@ html {
     background-color: #fff;
     transition: all 1s fade;
     animation: fade;
+    z-index: 999;
   }
 
   @keyframes fade {
@@ -257,7 +268,7 @@ html {
     background-color: #12121256;
     padding: 10px 20px;
     z-index: 20;
-    position: relative;
+    position: fixed;
 
     top: 0px;
     width: 100%;
@@ -316,8 +327,9 @@ html {
   // css for slider sizing
   .hero {
     position: relative;
-    margin-bottom: 115vh;
-    margin-top: -12%;
+    height: 100vh;
+    top: -20px;
+    width: 100%;
 
     .slider {
       height: 100vh;
@@ -325,6 +337,7 @@ html {
       margin-top: 20px;
       position: absolute;
       left: 0;
+      top: 0;
       overflow: hidden;
 
       img {
@@ -375,6 +388,8 @@ html {
             border-radius: 20px;
             font-size: 18px;
             cursor: pointer;
+            position: relative;
+            z-index: 99;
 
             a {
               color: white;
@@ -382,6 +397,21 @@ html {
               text-decoration: none;
               font-size: 24;
               font-family: $primery-font;
+              animation: changeColor 1s linear infinite;
+            }
+
+            @keyframes changeColor {
+              0% {
+                color: white;
+              }
+
+              50% {
+                color: yellow;
+              }
+
+              100% {
+                color: white;
+              }
             }
           }
         }
@@ -390,7 +420,7 @@ html {
   }
 
   .form-con {
-    display: none;
+    opacity: 0;
 
     .cross-con {
       position: absolute;
@@ -403,7 +433,7 @@ html {
       background-color: rgba(0, 0, 0, 0.7);
       position: absolute;
       top: 0;
-      z-index: 80;
+      z-index: 9990;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -411,7 +441,7 @@ html {
   }
 
   .heading {
-    top: 60px;
+    padding-top: 100px;
     text-align: center;
     font-family: $primery-font;
   }
@@ -422,7 +452,7 @@ html {
     margin-left: 7%;
     bottom: 0;
     margin-top: 70px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 
     .containers {
       display: flex;
@@ -492,6 +522,18 @@ html {
       border-radius: 10px;
       position: absolute;
       overflow: hidden;
+    }
+  }
+
+  .collage {
+    margin: 0 auto;
+    width: 100%;
+    .img-con-1 {
+      display: flex;
+
+      img {
+        width: 400px;
+      }
     }
   }
 }

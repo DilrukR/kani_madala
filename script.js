@@ -15,19 +15,18 @@ const ul = document.querySelector("ul");
 
 ham.addEventListener("click", show);
 cross.addEventListener("click", hide);
+nav.addEventListener("click", hide);
 
 function show() {
   nav.style.transform = "translatex(0%)";
   ham.style.display = "none";
   cross.style.display = "block";
-  nav.style.opacity = 1;
 }
 
 function hide() {
   nav.style.transform = "translatex(-100%)";
   cross.style.display = "none";
   ham.style.display = "block";
-  nav.style.opacity = 0;
 }
 
 // register pop up
@@ -40,8 +39,8 @@ btn.addEventListener("click", regshow);
 form.addEventListener("click", hidden);
 
 function regshow() {
-  form.style.display = "flex";
+  form.style.opacity = 1;
 }
 function hidden() {
-  form.style.display = "none";
+  form.style.opacity = 0;
 }
