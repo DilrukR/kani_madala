@@ -15,7 +15,7 @@ const ul = document.querySelector("ul");
 
 ham.addEventListener("click", show);
 cross.addEventListener("click", hide);
-nav.addEventListener("click", hide);
+// nav.addEventListener("click", hidee);
 
 function show() {
   nav.style.transform = "translatex(0%)";
