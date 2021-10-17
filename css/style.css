@@ -121,7 +121,7 @@ html {
   }
   .hero img {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     position: absolute;
     top: 0;
   }
@@ -140,6 +140,7 @@ html {
   }
   .hero .text-box .btn-con {
     padding-top: 30px;
+    padding-bottom: 40px;
   }
   .hero .text-box .btn-con button {
     width: 100px;
@@ -149,6 +150,18 @@ html {
     border-radius: 5px;
     color: #fff;
     margin-bottom: 30px;
+  }
+  .hero .slider::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background-color: black;
+    display: block;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 1;
   }
   .form-con {
     opacity: 0;
